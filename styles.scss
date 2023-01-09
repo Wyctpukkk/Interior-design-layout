@@ -4,8 +4,15 @@
   padding: 0;
 }
 .logo {
+  top: 10px;
   position: absolute;
-  width: 20px;
+  width: 100px;
+  margin: 0;
+  padding: 0;
+}
+.logo-footer {
+  position: relative;
+  width: 200px;
 }
 header {
   position: sticky;
@@ -34,6 +41,7 @@ nav {
 
     li {
       padding: 10px;
+      margin: 5px 0;
       a {
         text-decoration: 0;
         color: black;
@@ -71,13 +79,31 @@ main {
     }
   }
   .slider-parent {
+    margin-top: 30px;
+    height: 80vh;
     margin-right: 3vw;
     margin-bottom: 40px;
     .slider {
-      overflow: hidden;
-      img {
-        max-width: 40vw;
-        height: auto;
+      position: relative;
+      @keyframes fade {
+        from {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+      .slider-image {
+        width: 100%;
+        position: absolute;
+        opacity: 0;
+        &.active {
+          animation-name: fade;
+          animation-duration: 8s;
+        }
       }
     }
   }
@@ -208,10 +234,9 @@ footer {
   .footer-content {
     display: flex;
     justify-content: space-around;
-    width: 1800px;
+    width: 1600px;
     .footer-logo-name {
       .all-rights {
-        margin-top: 30px;
         p {
           font-size: 12px;
         }

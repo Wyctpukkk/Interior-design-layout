@@ -5,8 +5,16 @@
 }
 
 .logo {
+  top: 10px;
   position: absolute;
-  width: 20px;
+  width: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.logo-footer {
+  position: relative;
+  width: 200px;
 }
 
 header {
@@ -37,6 +45,7 @@ nav ul {
 }
 nav ul li {
   padding: 10px;
+  margin: 5px 0;
 }
 nav ul li a {
   -webkit-text-decoration: 0;
@@ -72,15 +81,46 @@ main {
   margin-bottom: 40px;
 }
 .wrapper-intro-about .slider-parent {
+  margin-top: 30px;
+  height: 80vh;
   margin-right: 3vw;
   margin-bottom: 40px;
 }
 .wrapper-intro-about .slider-parent .slider {
-  overflow: hidden;
+  position: relative;
 }
-.wrapper-intro-about .slider-parent .slider img {
-  max-width: 40vw;
-  height: auto;
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.wrapper-intro-about .slider-parent .slider .slider-image {
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+}
+.wrapper-intro-about .slider-parent .slider .slider-image.active {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
 }
 
 .wrapper-intro-approuch {
@@ -219,10 +259,7 @@ footer {
 footer .footer-content {
   display: flex;
   justify-content: space-around;
-  width: 1800px;
-}
-footer .footer-content .footer-logo-name .all-rights {
-  margin-top: 30px;
+  width: 1600px;
 }
 footer .footer-content .footer-logo-name .all-rights p {
   font-size: 12px;
