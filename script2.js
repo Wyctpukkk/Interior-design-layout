@@ -8,7 +8,6 @@ const callback = function (entries) {
     isIntersecting
       ? target.classList.add('action')
       : target.classList.remove('action');
-    console.log(entry);
   });
 };
 const options = {
@@ -27,7 +26,7 @@ const callback3 = function (entries) {
   });
 };
 const options3 = {
-  threshold: [0.4],
+  threshold: [0],
 };
 const observer3 = new IntersectionObserver(callback3, options3);
 observer3.observe(target3);
