@@ -5,9 +5,7 @@ window.onbeforeunload = function () {
 const callback = function (entries) {
   entries.forEach((entry) => {
     const { target, isIntersecting } = entry;
-    isIntersecting
-      ? target.classList.add('action')
-      : target.classList.remove('action');
+    isIntersecting ? target.classList.add('action') : '';
   });
 };
 const options = {
@@ -21,7 +19,7 @@ targets.forEach((target) => observer.observe(target));
 const target3 = document.querySelector('header');
 const callback3 = function (entries) {
   entries.forEach((entry) => {
-    const { target, isIntersecting } = entry;
+    const { target } = entry;
     target.classList.add('action');
   });
 };

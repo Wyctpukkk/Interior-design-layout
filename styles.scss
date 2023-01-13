@@ -32,7 +32,7 @@ header {
     margin: 0;
     padding: 0;
   }
-  @media (max-width: 450px) {
+  @media (max-width: 650px) {
     position: relative;
     padding: 30px;
     top: 1px;
@@ -48,7 +48,7 @@ header {
     @media (max-width: 1250px) {
       width: 90%;
     }
-    @media (max-width: 450px) {
+    @media (max-width: 650px) {
       .btn {
         ul {
           display: block;
@@ -114,7 +114,7 @@ header {
     ul {
       display: flex;
       list-style-type: none;
-      @media (max-width: 450px) {
+      @media (max-width: 650px) {
         display: none;
       }
       li {
@@ -206,24 +206,82 @@ main {
     grid-template-columns: 2.5fr 2fr;
     margin-bottom: 0px;
     padding-bottom: 0px;
-    height: 60vh;
-  }
-  @media (max-width: 450px) {
-    display: grid;
-    grid-template-columns: auto;
-    margin-bottom: 100px;
+    height: 70vh;
     section {
       .main-intro-about {
         font-size: 16px;
         margin-bottom: 20px;
       }
       .main-intro-about-title {
-        font-size: 25px;
+        font-size: 22px;
         margin-bottom: 50px;
       }
       p {
         margin: 30px 0px;
-        font-size: 19px;
+        font-size: 16px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+  @media (max-width: 650px) {
+    display: grid;
+    grid-template-columns: auto;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    height: 75vh;
+
+    section {
+      .main-intro-about {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+      .main-intro-about-title {
+        font-size: 22px;
+        margin-bottom: 50px;
+      }
+      p {
+        margin: 30px 0px;
+        font-size: 16px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+  @media (max-width: 550px) {
+    section {
+      margin-top: -100px;
+    }
+  }
+  @media (max-width: 400px) {
+    section {
+      padding-top: 0px;
+    }
+  }
+  @media (max-width: 380px) {
+    padding-bottom: 70px;
+    section {
+      padding-top: 70px;
+    }
+  }
+  @media (max-width: 450px) {
+    display: grid;
+    grid-template-columns: auto;
+    margin-bottom: -180px;
+
+    section {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+      .main-intro-about {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+      .main-intro-about-title {
+        font-size: 22px;
+        margin-bottom: 50px;
+      }
+      p {
+        margin: 30px 0px;
+        font-size: 16px;
         margin-bottom: 40px;
       }
     }
@@ -269,7 +327,7 @@ main {
       }
     }
   }
-  @media (max-width: 450px) {
+  @media (max-width: 650px) {
     margin-top: 500px;
     ul {
       grid-template-columns: auto;
@@ -287,7 +345,7 @@ main {
   cursor: pointer;
   color: black;
   text-decoration: 0;
-  @media (max-width: 450px) {
+  @media (max-width: 650px) {
     justify-content: center;
   }
 }
@@ -320,7 +378,7 @@ main {
       }
     }
   }
-  @media (max-width: 450px) {
+  @media (max-width: 650px) {
     flex-wrap: wrap;
     ul {
       li {
@@ -329,9 +387,6 @@ main {
         img {
           width: 90vw;
           margin-bottom: 0px;
-        }
-        a {
-          margin-left: 26vw;
         }
       }
     }
@@ -359,7 +414,7 @@ main {
       margin-top: 20px;
     }
   }
-  @media (max-width: 450px) {
+  @media (max-width: 650px) {
     display: grid;
     grid-template-columns: 2fr 2fr;
     margin: 10px 0 30px;
@@ -383,7 +438,8 @@ main {
     }
   }
 }
-button {
+
+.buttons {
   padding: 10px 20px;
   border-radius: 30px;
   border: 1px solid grey;
@@ -396,6 +452,15 @@ button {
     color: white;
   }
 }
+.buttons-burger {
+  position: absolute;
+  border: 0px;
+  background-color: unset;
+  z-index: 2;
+  right: 0px;
+  padding: 20px;
+}
+
 .wrapper-form {
   input {
     font-size: 16px;
@@ -412,7 +477,7 @@ button {
     &:focus {
       outline: 0;
     }
-    @media (max-width: 450px) {
+    @media (max-width: 650px) {
       padding: 20px 0px 15px;
       margin: 5px 0px 10px;
       font-size: 12px;
@@ -431,7 +496,7 @@ footer {
     justify-content: space-around;
     width: 1600px;
     .footer-logo-name {
-      @media (max-width: 450px) {
+      @media (max-width: 650px) {
         display: none;
       }
       .all-rights {
@@ -463,7 +528,7 @@ footer {
     }
     .footer-contacts-web {
       justify-content: center;
-      @media (max-width: 450px) {
+      @media (max-width: 650px) {
         display: none;
       }
       p {
@@ -522,7 +587,7 @@ footer {
       }
     }
   }
-  @media (max-width: 450px) {
+  @media (max-width: 650px) {
     grid-template-columns: auto;
     img {
       width: 90vw;
@@ -550,7 +615,7 @@ footer {
       }
     }
   }
-  @media (max-width: 450px) {
+  @media (max-width: 650px) {
     grid-template-columns: auto;
     img {
       width: 90vw;
@@ -579,7 +644,7 @@ footer {
   button {
     margin: auto;
   }
-  @media (max-width: 450px) {
+  @media (max-width: 650px) {
     grid-template-columns: 2.5fr 1fr;
     p {
       font-size: 16px;
@@ -604,7 +669,7 @@ footer {
     display: flex;
     justify-content: center;
   }
-  @media (max-width: 450px) {
+  @media (max-width: 650px) {
     display: flex;
     ul {
       display: grid;
