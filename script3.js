@@ -1,6 +1,6 @@
 const buttonBurger = document.querySelector('.btn');
 buttonBurger.addEventListener.onClick;
 
-buttonBurger.addEventListener('click', function (event) {
+buttonBurger.addEventListener('click', () => {
   buttonBurger.classList.toggle('active');
 });

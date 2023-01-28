@@ -22,7 +22,7 @@ header {
   transform: translateY(-200px);
   &.action {
     opacity: 1;
-    transition: all 1.5s;
+    transition: 1.5s;
     transform: translateY(0px);
   }
   .logo {
